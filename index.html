@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detector</title>
+</head>
+<body style="font-family: Arial; padding: 40px;">
+    <h2>Fake News Detector</h2>
+    <form method="POST" action="/predict">
+        <label>Enter News Headline:</label><br><br>
+        <input type="text" name="headline" required style="width: 300px; padding: 10px;"><br><br>
+        <input type="submit" value="Check" style="padding: 10px 20px;">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+        <p><strong>Headline:</strong> {{ headline }}</p>
+    {% endif %}
+</body>
+</html>
