@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 st.title("?? Fake News Detection App")
 
 model = pickle.load(open("fake_news_model.pkl", "rb"))
-vectorizer = pickle.load(open("tfidf-vectorizer.pkl", "rb"))
+vectorizer = pickle.load(open("tfidf_vectorizer.pkl", "rb"))
 
 user_input = st.text_area("Enter a news headline or text:")
 
